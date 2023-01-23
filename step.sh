@@ -28,6 +28,7 @@ echo "[INFO] New Bundle Identifier: 		${new_bundle_identifier}"
 # Replaces the setting PRODUCT_BUNDLE_IDENTIFIER in the .pbxproj file.
 echo ""
 echo "Replacing..."
-sed -i "" "s/\(PRODUCT_BUNDLE_IDENTIFIER = \).*\(;\)/\1${new_bundle_identifier}\2/" "$PBXPROJ_FILE"
+sed -i '' 's/fr.irrijardin.irrilake;/fr.irrijardin.irrilake.staging;/g' "$PBXPROJ_FILE"
+sed -i '' 's/fr.irrijardin.irrilake.OneSignalNotificationServiceExtension;/fr.irrijardin.irrilake.staging.OneSignalNotificationServiceExtension;/g' "$PBXPROJ_FILE"
 echo ""
 echo "[SUCCESS] Replace done!"
