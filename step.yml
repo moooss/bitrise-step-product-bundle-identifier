@@ -22,3 +22,11 @@ type_tags:
 is_requires_admin_user: false
 is_always_run: false
 is_skippable: false
+inputs:
+  - project_path:
+    opts:
+      title: "Xcode project path"
+      summary: "Path to the iOS project `.xcodeproj` file."
+      description: |
+        Path to the iOS project `.xcodeproj` file.
+      is_required: true

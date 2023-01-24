@@ -9,11 +9,6 @@ if [ -z "${project_path}" ]; then
   exit 1
 fi
 
-if [ -z "${new_bundle_identifier}" ]; then
-  echo "[ERROR] Missing required input: new_bundle_identifier"
-  exit 1
-fi
-
 # Exits if project file does not exists
 PBXPROJ_FILE="${project_path}/project.pbxproj"
 if [ ! -f $PBXPROJ_FILE ]; then
@@ -23,7 +18,6 @@ fi
 
 # Info statements
 echo "[INFO] Path of .xcodeproj file:		${project_path}"
-echo "[INFO] New Bundle Identifier: 		${new_bundle_identifier}"
 
 # Replaces the setting PRODUCT_BUNDLE_IDENTIFIER in the .pbxproj file.
 echo ""
